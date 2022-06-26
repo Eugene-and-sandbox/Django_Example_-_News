@@ -1,0 +1,64 @@
+<footer id="footer">
+  <!-- container -->
+  <div class="container">
+    <!-- row -->
+    <div class="row">
+      <div class="col-md-5">
+        <div class="footer-widget">
+          <div class="footer-logo">
+            <a href="index.html" class="logo"><img src="./img/logo.png" alt=""></a>
+          </div>
+          <div class="footer-copyright">
+								<span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> Template source code by <a href="https://colorlib.com" target="_blank">Colorlib</a>. Based on Bootstrap | Redesign and backend by <a
+                                          href="">Eugene</a>. Django Framework. 2022 | Use the links below for contacts
+                                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span>
+          </div>
+          <ul style="margin-top: 1.5rem" class="footer-nav">
+            <li><a href="https://www.facebook.com/eugene.chernishev" target="_blank">Facebook</a></li>
+            <li><a href="https://www.linkedin.com/in/eugene-chernyshev-79145886/" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="footer-widget">
+              <h3 class="footer-title">About</h3>
+              <ul class="footer-links">
+                <li><a href="{% url 'about' %}">About Project</a></li>
+<!--                <li><a href="#">Subscribe</a></li>-->
+                <li><a href="{% url 'contacts' %}">Contacts</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-widget">
+              <h3 class="footer-title">Catagories</h3>
+              <ul class="footer-links">
+                <li><a href="{% url 'photo' %}">Photo</a></li>
+                <li><a href="{% url 'video' %}">Video</a></li>
+                <li><a href="{% url 'audio' %}">Audio</a></li>
+<!--                <li><a href="category.html">Articles</a></li>-->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="footer-widget">
+          <h3 class="footer-title">eugene social</h3>
+          <ul class="footer-social">
+            <li><a href="https://www.linkedin.com/in/eugene-chernyshev-79145886/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/Eugene-and-sandbox" target="_blank"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://www.facebook.com/eugene.chernishev" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <!-- /row -->
+  </div>
+  <!-- /container -->
+</footer>

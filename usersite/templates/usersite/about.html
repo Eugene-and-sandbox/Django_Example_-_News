@@ -1,0 +1,65 @@
+{% extends 'usersite/_base.html' %}
+{% load static %}
+
+{% block title %}{% endblock %}
+{% block content %}
+	<div class="col-md-8">
+		<div class="section-row">
+			<p>Hello, my dear friend. I am a Django developer. This site - is template that present my skills in the Django framework. This site template shows regular site options that we can see on bigger patch of all sites
+				on the Internet.</p>
+			<figure class="figure-img">
+				<img class="img-responsive" src="./img/about-1.jpg" alt="">
+			</figure>
+			<p>On my Git Repository you should to find all examples of my codyng skils and knowlege. I learn and practice Django every time, so I will uppdate my Git Repository on my new site examples. If you interesting of me, I every time open for new skills and experience on new job or freelance. You find my contacts bellow.</p>
+		</div>
+		<div class="row section-row">
+			<div class="col-md-6">
+				<figure class="figure-img">
+					<img class="img-responsive" src="./img/about-2.jpg" alt="">
+				</figure>
+			</div>
+			<div class="col-md-6">
+				<h3>My Mission</h3>
+				<ul class="list-style">
+					<li><p>Realizing and improve my own programming skills.</p></li>
+					<li><p>Creating great projects.</p></li>
+					<li><p>Training of young padawans. On occasion</p></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<table class="table table-bordered">
+					<thead>
+						<th colspan="4" style="border-style: none;">My contacts</th>
+					</thead>
+				  <tbody>
+				    <tr>
+				      <th>Phones:</th>
+				      <td><i>063-227-96-70, 066-117-57-07</i></td>
+				      <th>Email:</th>
+							<td><i>eugene_chernyshev@yahoo.com</i></td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<!-- aside -->
+	<div class="col-md-4">
+		<!-- ad -->
+		<div class="aside-widget text-center">
+			<a href="#" style="display: inline-block;margin: auto;">
+				<img class="img-responsive" src="{% static 'img/me-1.jpg' %}" alt="">
+			</a>
+		</div>
+		<!-- /ad -->
+
+		<!-- post widget -->
+		<div class="aside-widget">
+		</div>
+		<!-- /post widget -->
+	</div>
+	<!-- /aside -->
+{% endblock %}
