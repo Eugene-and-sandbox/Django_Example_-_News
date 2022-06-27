@@ -5,7 +5,7 @@
 {% block content %}
 <div class="col-md-12">
     <div class="section-title text-center">
-      <h2>News Line</h2>
+      <h2>Стрічка новин</h2>
     </div>
 </div>
 <div class="row">
@@ -17,7 +17,7 @@
                   src="{{ item.daily_image | default:'default_image.png' }}" alt=""></a>
           <div class="post-body">
               <div class="post-meta">
-                  <span class="post-category cat-2">Day {{ item.day_number }}</span>
+                  <span class="post-category cat-2">День {{ item.day_number }}</span>
                   <span class="post-date">{{ item.date }}</span>
               </div>
               <h3 class="post-title"><a href="{% url 'review' item.pk %}">{{ item.day_title }}</a></h3>
@@ -62,7 +62,7 @@
                     <a class="post-img" href="blog-post.html"><img src="{{ current_day.daily_image }}" alt=""></a>
                     <div class="post-body">
                         <div class="post-meta">
-                            <a class="post-category cat-3" href="category.html">Day {{ current_day.day_number }}</a>
+                            <a class="post-category cat-3" href="category.html">День {{ current_day.day_number }}</a>
                             <span class="post-date">{{ current_day.date }}</span>
                         </div>
                         <h3 class="post-title"><a href="blog-post.html">{{ current_day.day_title }}</a></h3>
