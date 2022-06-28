@@ -17,7 +17,7 @@ DB_PASSWORD = os.getenv('DB_PASSWORD')
 SECRET_KEY = os.getenv('SECRET_KEY', 'Optional default value')
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
 
 SECRET_KEY = SECRET_KEY
@@ -112,9 +112,9 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'usersite/static'),
+    os.path.join(BASE_DIR, '../usersite/static'),
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
