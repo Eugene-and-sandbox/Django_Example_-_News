@@ -28,32 +28,41 @@
 		  <script src="{% static 'js/respond.min.js' %}"></script>
 		<![endif]-->
 
-    </head>
-<body>
-{% include 'usersite/inc/_header.html' %}
-<!-- section -->
-<div class="section">
-    <!-- container -->
-    <div class="container">
-        <!-- row -->
-        <div class="row">
-<!--            <div class="col-md-12">-->
-<!--                <div class="section-title">-->
-<!--                    <h2>Recent Posts</h2>-->
-<!--                </div>-->
-<!--            </div>-->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-W3ZNCYFE5M"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
 
-            <!-- post -->
-            {% block content %}{% endblock %}
-            <!-- /post -->
-            <div class="clearfix visible-md visible-lg"></div>
-        </div>
-        <!-- /row -->
-    </div>
-    <!-- /container -->
-</div>
-<!-- /section -->
+		  gtag('config', 'G-W3ZNCYFE5M');
+		</script>
+	</head>
+	<body>
+	{% include 'usersite/inc/_header.html' %}
+	<!-- section -->
+	<div class="section">
+	    <!-- container -->
+	    <div class="container">
+	        <!-- row -->
+	        <div class="row">
+	<!--            <div class="col-md-12">-->
+	<!--                <div class="section-title">-->
+	<!--                    <h2>Recent Posts</h2>-->
+	<!--                </div>-->
+	<!--            </div>-->
 
-{% include 'usersite/inc/_footer.html' %}
-</body>
+	            <!-- post -->
+	            {% block content %}{% endblock %}
+	            <!-- /post -->
+	            <div class="clearfix visible-md visible-lg"></div>
+	        </div>
+	        <!-- /row -->
+	    </div>
+	    <!-- /container -->
+	</div>
+	<!-- /section -->
+
+	{% include 'usersite/inc/_footer.html' %}
+	</body>
 </html>
