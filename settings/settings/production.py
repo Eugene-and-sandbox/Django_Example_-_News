@@ -2,8 +2,6 @@ import os
 import dj_database_url
 
 from pathlib import Path
-from dotenv import load_dotenv
-load_dotenv()
 
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST = os.getenv('EMAIL_HOST')
