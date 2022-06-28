@@ -2,6 +2,19 @@ import os
 import dj_database_url
 
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
+
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST = os.getenv('EMAIL_HOST')
+EMAIL_PORT = os.getenv('EMAIL_PORT')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+
+DB_HOST = os.getenv('DB_HOST')
+DB_NAME = os.getenv('DB_NAME')
+DB_USER = os.getenv('DB_USER')
+DB_PASSWORD = os.getenv('DB_PASSWORD')
+
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'Optional default value')
 
@@ -69,7 +82,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-dj = dj_database_url.config()
+db = dj_database_url.config()
 DATABASES['default'].update(db)
 
 
@@ -108,9 +121,9 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_HOST = 'smtp.ukr.net'
-EMAIL_PORT = 465
-EMAIL_HOST_USER = 'eugene_chernyshev@ukr.net'
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST = EMAIL_HOST
+EMAIL_PORT = EMAIL_PORT
+EMAIL_HOST_USER = EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
