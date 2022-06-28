@@ -1,16 +1,20 @@
 import os
+import dj_database_url
+
 from pathlib import Path
+
+SECRET_KEY = os.getenv('SECRET_KEY', 'Optional default value')
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = 'django-insecure--iyxvpfis2e+)t$oigx@n+o9%wrchts=gcwzr)a9ox)32bm^@_'
+SECRET_KEY = SECRET_KEY
 
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.0.106']
+ALLOWED_HOSTS = ['eugene-example-news.herokuapp.com']
 
 INSTALLED_APPS = [
     'jazzmin',
@@ -25,6 +29,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -56,10 +61,16 @@ WSGI_APPLICATION = 'settings.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
+        'HOST': DB_HOST,
+        'PORT': '5432',
     }
 }
+dj = dj_database_url.config()
+DATABASES['default'].update(db)
 
 
 AUTH_PASSWORD_VALIDATORS = [
